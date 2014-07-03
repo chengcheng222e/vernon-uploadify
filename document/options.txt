@@ -1,0 +1,42 @@
+'auto': false,
+'buttonClass': 'upload-button-cus',
+'buttonCursor': 'arrow',
+'buttonImage': '/wenda/test-demo/image_add_48.png',
+'buttonText': 'BROWSE...',
+'debug': true,
+'fileObjName': 'the_files',
+'fileSizeLimit': '100KB',// 图片上传的大小
+'fileTypeDesc': 'Image Files',
+'fileTypeExts': '*.gif; *.jpg; *.png',
+'formData': {'someKey': 'someValue', 'someOtherKey': 1},
+//'height': 20,
+//'width': 30,
+'itemTemplate': '<div id="${fileID}" class="uploadify-queue-item">\
+    <div class="cancel">\
+        <a href="javascript:$(\'#${instanceID}\').uploadify(\'cancel\', \'${fileID}\')">X</a>\
+    </div>\
+    <span class="fileName">${fileName} (${fileSize})</span><span class="data"></span>\
+</div>',
+'method': 'post',// 提交方式
+'multi': true, // 设置false, 则只能选中一张图片
+'overrideEvents': ['onUploadProgress'],  // The progress will not be updated
+'preventCaching': true,// true 防止缓存
+'progressData': 'speed',
+'queueID': 'some-file-queue',
+'queueSizeLimit': 3,// 每次上传的张数
+'removeCompleted': false,
+'removeTimeout': 10,
+'requeueErrors': true,
+'checkExisting': '/uploadify/check-exists.php',
+'swf': '/wenda/test-demo/uploadify/uploadify.swf',
+'uploader': 'uploadify.php',
+'uploadLimit': 4 ,// 图片上传的数量
+
+
+
+'itemTemplate' : '<li id="\${fileID}" class="uploadify-queue-item">\
+                    <div class="cancel">\
+                        <a href="javascript:$(\'#\${instanceID}\').uploadify(\'cancel\', \'\${fileID}\')">X</a>\
+                    </div>\
+                    <span class="fileName">\${fileName} (\${fileSize})</span><span class="data"></span>\
+                </li>',

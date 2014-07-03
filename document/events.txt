@@ -1,0 +1,71 @@
+// 关闭
+'onCancel' : function(file) {
+    alert('The file ' + file.name + ' was cancelled.');
+},
+// 清空队列
+'onClearQueue' : function(queueItemCount) {
+    alert(queueItemCount + ' file(s) were removed from the queue');
+},
+// 销毁
+'onDestroy' : function() {
+    alert('I am getting destroyed!');
+},
+// 对话框关闭
+'onDialogClose'  : function(queueData) {
+    alert(queueData.filesQueued + ' files were queued of ' + queueData.filesSelected + ' selected files. There are ' + queueData.queueLength + ' total files in the queue.');
+},
+// 对话框打开
+'onDialogOpen' : function() {
+    $('#message_box').html('The file dialog box was opened...');
+},
+// 禁止
+'onDisable' : function() {
+    alert('You have disabled Uploadify!');
+},
+// 可用
+'onEnable' : function() {
+    alert('You can use Uploadify again.');
+},
+'onFallback' : function() {
+    alert('Flash was not detected.');
+},
+// 初始化
+'onInit'   : function(instance) {
+    alert('The queue ID is ' + instance.settings.queueID);
+},
+// 队列完成
+'onQueueComplete' : function(queueData) {
+    alert(queueData.uploadsSuccessful + ' files were successfully uploaded.');
+},
+// 选中
+'onSelect' : function(file) {
+    alert('The file ' + file.name + ' was added to the queue.');
+},
+// 选中错误
+'onSelectError' : function() {
+    alert('The file ' + file.name + ' returned an error and was not added to the queue.');
+},
+// 准备好
+'onSWFReady' : function() {
+    alert('The Flash file is ready to go.');
+},
+// 上传完毕
+'onUploadComplete' : function(file) {
+    alert('The file ' + file.name + ' finished processing.');
+},
+// 上传出错
+'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+    alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
+},
+// 上传过程
+'onUploadProgress' : function(file, bytesUploaded, bytesTotal, totalBytesUploaded, totalBytesTotal) {
+    $('#progress').html(totalBytesUploaded + ' bytes uploaded of ' + totalBytesTotal + ' bytes.');
+},
+// 上传开始
+'onUploadStart' : function(file) {
+    alert('Starting to upload ' + file.name);
+},
+// 上传成功
+'onUploadSuccess' : function(file, data, response) {
+    alert('The file ' + file.name + ' was successfully uploaded with a response of ' + response + ':' + data);
+}
